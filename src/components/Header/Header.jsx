@@ -6,7 +6,7 @@ import style from './Header.module.css';
 
 export const Header = () => {
   const [isActive, setOnMenuBtn] = useState(false);
-  const isLogin = true;
+  const isLogin = false;
   const handlerMenu = () => {
     setOnMenuBtn(!isActive);
   };
@@ -20,10 +20,9 @@ export const Header = () => {
             isLogin={isLogin}
             isActive={isActive}
           ></Navigation>
-          <BurgerMenu
-            handlerMenu={handlerMenu}
-            isActive={isActive}
-          ></BurgerMenu>
+          {isLogin && (
+            <BurgerMenu handlerMenu={handlerMenu} isActive={isActive} />
+          )}
         </div>
       </div>
     </header>

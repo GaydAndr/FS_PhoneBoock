@@ -4,7 +4,6 @@ import styles from './Navigation.module.css';
 
 export const Navigation = ({ handlerMenu, isLogin, isActive }) => {
   const location = useLocation();
-  console.log(isLogin);
 
   //  const matches = useMediaQuery('(max-width:767px)');
   return (
